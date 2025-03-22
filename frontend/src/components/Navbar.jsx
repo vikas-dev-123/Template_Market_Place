@@ -1,22 +1,32 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div className="fixed z-[999] w-full px-6 md:px-20 py-4 md:py-8 flex justify-between bg-black">
-    <div className="logo h-10 mb-2 border rounded border-white flex items-center justify-center px-4">
-      <div className="text-white text-xl md:text-2xl font-bold">
-        TEMPLATE
+    <div className="fixed z-[999] w-full px-20 bg-black text-white py-8 flex justify-between">
+      <div className='logo text-xl border h-15 w-32 px-9 py-2 rounded'>
+        <span className='text-[30px] font-bold text-zinc-500'>T</span>
+        <span className='text-[30px] font-bold text-zinc-500'>M</span>
+      </div>
+      <div className='links flex gap-10'>
+        {[
+          { name: "Templates", path: "/templates" },
+          { name: "Our work", path: "/our-work" },
+          { name: "Insight", path: "/insight" }
+        ].map((item, index) => (
+          <Link key={index} to={item.path} className="relative text-md capitalize font-regular">
+            {item.name}
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
+          </Link>
+        ))}
+        <Link to="/signup" className="relative text-md capitalize font-regular ml-32 transition-transform duration-300 hover:scale-105">
+          <div className="px-4 py-2 border border-white rounded   hover:transition text-center">
+            SignUp
+          </div>
+          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
+        </Link>
       </div>
     </div>
-    <div className="links flex flex-col md:flex-row gap-4 md:gap-10 items-center">
-      {["Home", "Templates", "Pricing", "Blog", "Contact"].map((item, index) => (
-        <a key={index} href={`#${item.toLowerCase()}`} className="text-md capitalize text-white font-regular relative">
-          {item}
-          <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white scale-x-0 origin-left transition-transform duration-300 hover:scale-x-100"></span>
-        </a>
-      ))}
-    </div>
-  </div>
   );
 };
 

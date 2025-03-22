@@ -1,18 +1,18 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import ImageScroll from '../components/Eye'
+import React from 'react';
+import Navbar from '../components/Navbar';
+import LandingPage from '../components/landingpage';
+import Marquee from '../components/Marquee';
+import About from '../components/about';
 
 const Home = () => {
   return (
-  <>
-  
-  <div className='bg-black h-screen'>
-     <Navbar />
-  <ImageScroll />
-  </div>
-  </>
-)
-}
+    <>
+      <Navbar />
+      <LandingPage />
+      <Marquee />
+      <About/> 
+    </>
+  );
+};
 
-export default Home
- 
+export default Home;
