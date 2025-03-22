@@ -5,7 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
-function App() {
+function Template() {
   const [showCanvas, setShowCanvas] = useState(true); // Initially set to true to show canvas
   const headingRef = useRef(null);
   const growingSpan = useRef(null);
@@ -122,4 +122,4 @@ function App() {
   );
 }
 
-export default App;
+export default Template;

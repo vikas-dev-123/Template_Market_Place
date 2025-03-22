@@ -1,13 +1,14 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+ 
 import LandingPage from '../components/landingpage';
 import Marquee from '../components/Marquee';
 import About from '../components/about';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+       <Navbar/>
       <LandingPage />
       <Marquee />
       <About/> 
