@@ -1,28 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AnimatedGooeyEffect from './AnimatedGooeyEffect'; // Adjust the import path as needed
 
 const About = () => {
   return (
     <div className="w-full p-10 md:p-20 bg-amber-950 rounded-tl-3xl rounded-tr-3xl text-black">
       
-      {/* SVG Filter Definition for Gooey Effect */}
-      <svg width="0" height="0">
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-          <feColorMatrix 
-            in="blur" 
-            mode="matrix" 
-            values="
-              1 0 0 0 0  
-              0 1 0 0 0  
-              0 0 1 0 0  
-              0 0 0 18 -7" 
-            result="goo" 
-          />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </svg>
 
       <h1 className='font-["Matter"] leading-[3.5vw] tracking-tight text-[4.5vw]'>
         Welcome to Template Market Place, your go-to destination for high-quality website templates.

@@ -7,9 +7,9 @@ import Navbar from '../components/Navbar';
 const Templates = () => {
   const templates = [
     { name: 'Cyber Punk', image: '/cyberpunk.png', link: '/cyber-punk', bgColor: 'bg-red-500', cost: '$49' },
-    { name: 'Neon Wave', image: '/studio.png', link: '/studio', bgColor: 'bg-green-500', cost: '$39' },
-    { name: 'Futuristic', image: '/futuristic.png', link: '/futuristic', bgColor: 'bg-blue-500', cost: '$59' },
-    { name: 'Dark Mode', image: '/darkmode.png', link: '/dark-mode', bgColor: 'bg-gray-700', cost: '$29' },
+    { name: 'New Innovations', image: '/studio.png', link: '/studio', bgColor: 'bg-green-500', cost: '$39' },
+    { name: 'Futuristic Gadgets', image: '/Mac.png', link: '/Macbook', bgColor: 'bg-blue-500', cost: '$59' },
+    { name: 'Dark Mode Portfolio', image: '/portfolio.png', link: '/Portfolio', bgColor: 'bg-gray-700', cost: '$29' },
     { name: 'Abstract', image: '/abstract.png', link: '/abstract', bgColor: 'bg-purple-500', cost: '$45' },
     { name: 'Minimalist', image: '/minimalist.png', link: '/minimalist', bgColor: 'bg-teal-500', cost: '$35' },
     { name: 'Vintage', image: '/vintage.png', link: '/vintage', bgColor: 'bg-orange-500', cost: '$40' },

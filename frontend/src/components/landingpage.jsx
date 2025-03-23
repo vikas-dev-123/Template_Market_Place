@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
-    <div className='relative w-full min-h-screen bg-black text-white overflow-hidden'>
+    <div className='relative w-full min-h-screen bg-black text-white overflow-hidden' data-scroll-section>
 
       {/* Animated Gradient Background */}
       <motion.div
@@ -21,17 +21,21 @@ const LandingPage = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5 }}
         className='absolute top-10 left-20 w-40 h-40 bg-purple-600 rounded-full blur-3xl opacity-30'
+        data-scroll
+        data-scroll-speed="2"
       />
       
       <motion.div 
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className='absolute bottom-10 right-20 w-40 h-40   rounded-full blur-3xl opacity-30'
+        className='absolute bottom-10 right-20 w-40 h-40 rounded-full blur-3xl opacity-30'
+        data-scroll
+        data-scroll-speed="4"
       />
 
       {/* Hero Section with Glassmorphism */}
-      <div className='relative z-10 textstructure mt-32 px-6 md:px-20'>
+      <div className='relative z-10 textstructure mt-32 px-6 md:px-20' data-scroll data-scroll-speed="1">
 
         {["Creating an", "Template", "MarketPlace"].map((item, index) => (
           <motion.div 
@@ -63,7 +67,7 @@ const LandingPage = () => {
       </div>
 
       {/* Info & CTA Section */}
-      <div className='relative z-10 border-t-2 border-zinc-800 mt-20 md:mt-28 flex flex-col md:flex-row justify-between items-center py-10 px-6 md:px-20'>
+      <div className='relative z-10 border-t-2 border-zinc-800 mt-20 md:mt-28 flex flex-col md:flex-row justify-between items-center py-10 px-6 md:px-20' data-scroll data-scroll-speed="3">
 
         {/* Info Text */}
         <motion.div 

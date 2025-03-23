@@ -20,8 +20,8 @@ const Navbar = () => {
         transition={{ duration: 0.8 }}
         className="flex items-center"
       >
-        <div className="relative flex items-center justify-center w-14 h-14 rounded-full  hover:scale-110 transition-transform duration-300">
-          <span className="text-sm font-extrabold text-white tracking-wide">templatemarketplace</span>
+       <div className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-full hover:scale-110 transition-transform duration-300">
+          <span className="text-xs md:text-sm font-bold ml-12 text-white tracking-wide">templatemarketplace</span>
         </div>
       </motion.div>
 
