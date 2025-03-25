@@ -12,6 +12,11 @@ import Ourwork from './pages/Ourwork';
 import Insights from './pages/Insights';
 import Macbook from './components/template3/Macbook';
 import Portfolio from './components/template4/Portolio';
+import UserProtectedWrapper from './pages/UserProtectedRoutes';
+import UserLogout from './pages/UserLogout'
+import Start from './pages/Start';
+
+
 const App = () => {
   return (
     <div data-scroll-container>
@@ -19,15 +24,53 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/templates' element={<Templates/>} />
-        <Route path='/our-work' element={<Ourwork/>}/>
-        <Route path='/insight' element={<Insights/>}/>
-        <Route path='/cyber-punk' element={<Render/>}/>
-        <Route path='/studio' element={<Template/>} />
-        <Route path='/Macbook' element={<Macbook/>} />
-        <Route path='/Portfolio' element={<Portfolio/>} />
-      </Routes>
+        <Route path='/login' element={<Login/> } />
+        <Route path="/home" element={
+          <UserProtectedWrapper>
+          <Start />
+          </UserProtectedWrapper>
+          } />
+        <Route path='/templates' element={
+          <UserProtectedWrapper>
+            <Templates />
+          </UserProtectedWrapper>
+        } />
+        <Route path='/our-work' element={
+          <UserProtectedWrapper>
+            <Ourwork/>
+          </UserProtectedWrapper>
+        }/>
+        <Route path='/insight' element={
+          <UserProtectedWrapper>
+            <Insights/>
+          </UserProtectedWrapper>
+        }/>
+        <Route path='/cyber-punk' element={
+          <UserProtectedWrapper>
+            <Render/>
+          </UserProtectedWrapper>
+        }/>
+        <Route path='/studio' element={
+          <UserProtectedWrapper>
+            <Template/>
+          </UserProtectedWrapper>
+        } />
+        <Route path='/Macbook' element={
+          <UserProtectedWrapper>
+            <Macbook/>
+          </UserProtectedWrapper>
+        } />
+        <Route path='/Portfolio' element={
+          <UserProtectedWrapper>
+            <Portfolio/>
+          </UserProtectedWrapper>
+        } />
+      <Route path='/user/logout' element={
+        <UserProtectedWrapper>
+            <UserLogout/>
+          </UserProtectedWrapper>
+        }/>
+        </Routes>
     </div>
   );
 };

@@ -1,34 +1,50 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { UserDataContext } from '../context/UserContext'
+import axios from 'axios';
 
 const UserSignup = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
-  const [userData, setUserData] = useState({});
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const navigate = useNavigate()
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setUserData({
+  // eslint-disable-next-line no-unused-vars
+  const { user, setUser } = useContext(UserDataContext)
+
+  const submitHandler = async (e) => {
+    e.preventDefault()
+    const newUser = {
+      fullname: {
+        firstname: firstname,
+        lastname: lastname
+      },
       email: email,
       password: password,
-      fullName: {
-        firstName: firstname,
-        lastName: lastname,
-      },
-    });
+    }
 
-    console.log('User Data:', userData);
+     
 
-    // Reset form fields
-    setEmail('');
-    setPassword('');
-    setFirstname('');
-    setLastname('');
-  };
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
+      if (response.status === 201) {
+        const data = response.data
+        setUser(data.user)
+        localStorage.setItem('token', data.token)
+        navigate('/home')
+      }
+    } catch (error) {
+      console.error('Error during registration:', error.response?.data || error.message)
+    }
+
+    setEmail('')
+    setPassword('')
+    setFirstname('')
+    setLastname('')
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">

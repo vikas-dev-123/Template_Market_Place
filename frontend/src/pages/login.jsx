@@ -1,21 +1,40 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
+import { UserDataContext } from '../context/UserContext';
+import axios from 'axios';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  // eslint-disable-next-line no-unused-vars
+  const [userData, setUserData] = useState({})
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
+  // eslint-disable-next-line no-unused-vars
+  const {user , setUser} = useContext(UserDataContext)
+  const navigate = useNavigate()
 
-    // Reset the form fields
-    setEmail('');
-    setPassword('');
-  };
+  const submitHandler = async(e) => {
+    e.preventDefault()
+    
+    const userData = {
+      email:email,
+      password:password
+    }
+
+    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/login`, userData)
+
+    if(response.status === 200) {
+      const data = response.data
+      setUser(data.user)
+      localStorage.setItem('token', data.token)
+      navigate('/home')
+    }
+
+    setEmail('')
+    setPassword('')
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
@@ -27,7 +46,7 @@ const Login = () => {
       >
         <h2 className="text-3xl font-bold text-center mb-8">Login</h2>
         
-        <form onSubmit={handleSubmit} className="space-y-8">
+        <form onSubmit={submitHandler} className="space-y-8">
           {/* Email Field */}
           <div>
             <h3 className="text-lg font-medium mb-4">Email</h3>
