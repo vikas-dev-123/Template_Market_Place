@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed z-[999] text-white w-full px-4 sm:px-6 md:px-20 py-3 sm:py-4 md:py-6">
-      <div className="relative flex flex-wrap justify-between items-center c rounded-xl p-2 sm:p-3 md:p-4">
+      <div className="relative flex flex-wrap justify-between items-center backdrop-blur-md shadow-lg rounded-xl p-2 sm:p-3 md:p-4">
         {/* Logo Section */}
         <motion.div 
           initial={{ opacity: 0, x: -30 }}

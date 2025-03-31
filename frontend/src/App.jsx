@@ -32,7 +32,7 @@ const App = () => {
           } />
         <Route path='/templates' element={
           <UserProtectedWrapper>
-            <Templates />
+            <Templates/>
           </UserProtectedWrapper>
         } />
         <Route path='/our-work' element={
@@ -65,11 +65,7 @@ const App = () => {
             <Portfolio/>
           </UserProtectedWrapper>
         } />
-      <Route path='/user/logout' element={
-        <UserProtectedWrapper>
-            <UserLogout/>
-          </UserProtectedWrapper>
-        }/>
+      <Route path='/user/logout' element={<UserLogout/>}/>
         </Routes>
     </div>
   );
