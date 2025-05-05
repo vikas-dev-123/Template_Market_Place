@@ -99,12 +99,9 @@ const Navbar = () => {
               { name: "Templates", path: "/templates" },
               { name: "Our work", path: "/our-work" },
               { name: "Insight", path: "/insight" },
-              ...(user
-                ? [{ name: "Logout", path: "/user/logout" }] // Show Logout if user is logged in
-                : [
-                    { name: "SignUp", path: "/signup" }, // Show SignUp and Login if user is not logged in
-                    { name: "Login", path: "/login" },
-                  ]),
+              { name: "SignUp", path: "/signup" },
+              { name: "Login", path: "/login" },
+              { name: "Logout", path: "/user/logout" }   
             ].map((item, index) => (
               <motion.div
                 key={index}

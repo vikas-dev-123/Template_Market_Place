@@ -35,14 +35,7 @@
           data-scroll-speed="2"
         />
         
-        <motion.div 
-          initial={{ x: 200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5 }}
-          className='absolute bottom-10 right-[5%] md:right-20 w-24 md:w-40 h-24 md:h-40 bg-blue-600 rounded-full blur-2xl md:blur-3xl opacity-30'
-          data-scroll
-          data-scroll-speed="4"
-        />
+       
 
         {/* Hero Section with Glassmorphism - Improved responsiveness */}
         <div className='relative z-10 textstructure mt-16 sm:mt-24 md:mt-32 px-4 sm:px-6 md:px-20' data-scroll data-scroll-speed="1">
