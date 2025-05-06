@@ -7,56 +7,56 @@ const Insights = () => {
   const insights =  [
     {
       title: "Design Trends 2023",
-      image: "/insight1.png",
+      image: "https://static.canva.com/static/images/canva_templates_array.jpg",
       description: "Explore the latest design trends and emerging technologies shaping the industry.",
       link: "/insight/design-trends-2023",
       moreInfo: "In-depth analysis of design trends for 2023, including color schemes, typography, and layout techniques."
     },
     {
       title: "UX Best Practices",
-      image: "/insight2.png",
+      image: "https://blog-frontend.envato.com/cdn-cgi/image/width=2400,quality=75,format=auto/uploads/sites/2/2021/11/CON204-NovemberBlog-SocialMediaTemplates.jpg",
       description: "Discover key principles for creating intuitive and engaging user experiences.",
       link: "/insight/ux-best-practices",
       moreInfo: "Learn about user research, wireframing, prototyping, and usability testing to enhance user experience."
     },
     {
       title: "Case Study: Modern Templates",
-      image: "/insight3.png",
+      image: "https://www.computerhope.com/jargon/t/template.jpg",
       description: "Learn from our successful projects and gain insights into our design process.",
       link: "/insight/case-study-modern-templates",
       moreInfo: "Detailed case study of our modern templates, showcasing the design process, challenges, and solutions."
     },
     {
       title: "Future of Web Design",
-      image: "/insight4.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUtgCuCtwUtWtjLI8eYILJ8-u_9Krrnbf__A&s",
       description: "A look into upcoming innovations and the future of web design.",
       link: "/insight/future-web-design",
       moreInfo: "Explore the future of web design with insights into new technologies, tools, and methodologies."
     },
     {
       title: "Responsive Design",
-      image: "/insight5.png",
+      image: "https://tint.creativemarket.com/p1dyZw6avvntmu6UooYq8eAdNnqJJhyQVkP7IgjudaU/width:440/height:292/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzUzMzAvNTMzMDIvNTMzMDI4OTcvc2xpZGU1LW8uanBnIzE3NDU0Njc5OTQ?1745467994",
       description: "Best practices for creating responsive and adaptive web designs.",
       link: "/insight/responsive-design",
       moreInfo: "Learn how to create web designs that work seamlessly across different devices and screen sizes."
     },
     {
       title: "Accessibility in Web Design",
-      image: "/insight6.png",
+      image: "https://st2.depositphotos.com/1181438/5861/v/450/depositphotos_58618377-stock-illustration-set-of-flyer-design-web.jpg",
       description: "Ensuring your web designs are accessible to all users.",
       link: "/insight/accessibility-web-design",
       moreInfo: "Understand the importance of accessibility and how to implement it in your web designs."
     },
     {
       title: "SEO for Modern Websites",
-      image: "/insight7.png",
+      image: "https://content-management-files.canva.com/cdn-cgi/image/f=auto,q=70/7642501b-1c52-4a92-b1b4-298a039be132/presentations_promo-showcase_012x.png",
       description: "Optimizing your website for search engines.",
       link: "/insight/seo-modern-websites",
       moreInfo: "Learn the latest SEO techniques to improve your website's visibility and ranking on search engines."
     },
     {
       title: "E-commerce Design Tips",
-      image: "/insight8.png",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuqqaq270TQL6EZwVs12eDp2EmFkuRPBw-Jw&s",
       description: "Designing effective and user-friendly e-commerce websites.",
       link: "/insight/ecommerce-design-tips",
       moreInfo: "Discover tips and best practices for creating successful e-commerce websites."

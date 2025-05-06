@@ -39,7 +39,7 @@ const Ourwork = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <img 
-            src="/project1.png" 
+            src="Cuberto.png" 
             alt="Project One" 
             className="w-full h-64 object-cover" 
           />
@@ -60,7 +60,7 @@ const Ourwork = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img 
-            src="/project2.png" 
+            src="cyberpunk.png" 
             alt="Project Two" 
             className="w-full h-64 object-cover" 
           />
@@ -81,7 +81,7 @@ const Ourwork = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <img 
-            src="/project3.png" 
+            src="temp1.png" 
             alt="Project Three" 
             className="w-full h-64 object-cover" 
           />
@@ -101,7 +101,7 @@ const Ourwork = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <img 
-            src="/project4.png" 
+            src="traffic.png" 
             alt="Project Four" 
             className="w-full h-64 object-cover" 
           />
