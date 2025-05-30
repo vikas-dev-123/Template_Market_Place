@@ -26,44 +26,44 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path='/login' element={<Login/> } />
         <Route path="/home" element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
           <Start />
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
           } />
         <Route path='/templates' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Templates/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         } />
         <Route path='/our-work' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Ourwork/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         }/>
         <Route path='/insight' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Insights/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         }/>
         <Route path='/cyber-punk' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Render/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         }/>
         <Route path='/studio' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Template/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         } />
         <Route path='/Macbook' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Macbook/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         } />
         <Route path='/Portfolio' element={
-          <UserProtectedWrapper>
+          // <UserProtectedWrapper>
             <Portfolio/>
-          </UserProtectedWrapper>
+          // </UserProtectedWrapper>
         } />
       <Route path='/user/logout' element={<UserLogout/>}/>
         </Routes>
