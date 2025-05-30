@@ -12,7 +12,7 @@ import Ourwork from './pages/Ourwork';
 import Insights from './pages/Insights';
 import Macbook from './components/template3/Macbook';
 import Portfolio from './components/template4/Portolio';
-import UserProtectedWrapper from './pages/UserProtectedRoutes';
+// import UserProtectedWrapper from './pages/UserProtectedRoutes';
 import UserLogout from './pages/UserLogout'
 import Start from './pages/Start';
 
