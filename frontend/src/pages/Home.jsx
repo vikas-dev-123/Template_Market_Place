@@ -2,7 +2,7 @@ import React from 'react';
  
 import LandingPage from '../components/landingpage';
 import Marquee from '../components/Marquee';
-import About from '../components/about';
+import About from '../components/About';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
